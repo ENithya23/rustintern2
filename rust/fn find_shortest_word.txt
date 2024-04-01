@@ -1,0 +1,11 @@
+fn find_shortest_word(input: &str) -> Option<&str> {
+    input.split_whitespace().min_by_key(|word| word.len())
+}
+
+fn main() {
+    let sentence = "This is a sample sentence with some words";
+    match find_shortest_word(sentence) {
+        Some(shortest) => println!("Shortest word: {}", shortest),
+        None => println!("No words found in the sentence"),
+    }
+}

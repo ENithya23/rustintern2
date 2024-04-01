@@ -1,0 +1,6 @@
+fn main() {
+    let mut s = String::from("hello");
+    let reversed: String = s.chars().rev().collect();
+    println!("Original string: {}", s);
+    println!("Reversed string: {}", reversed);
+}

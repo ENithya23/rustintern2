@@ -1,0 +1,17 @@
+fn find_median(arr: &[i32]) -> f64 {
+    let len = arr.len();
+    if len % 2 == 0 {
+        let mid = len / 2;
+        (arr[mid - 1] + arr[mid]) as f64 / 2.0
+    } else {
+        arr[len / 2] as f64
+    }
+}
+
+fn main() {
+    let arr = [1, 2, 3, 4, 5, 6];
+    println!("Median-even: {}", find_median(&arr));
+
+    let arr2 = [1, 2, 3, 4, 5, 6, 7];
+    println!("Median-odd: {}", find_median(&arr2));
+}
